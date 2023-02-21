@@ -2,16 +2,6 @@
 import { rps } from "../lib/rpsls.js"
 
 
-// ---------- Requirements -----------
-// Two versions of the game (RPS and RPSLS) in one package.
-// If the command or function is called without an argument, it should return only the shot for one player, e.g. {"player":"rock"}.
-// If the command or function is called with an argument, it should return the results of a game between a player and an opponent, e.g. {"player":"rock","opponent":"scissors","result":"lose"}.
-// If you supply any argument other than those the individual function is expecting, the user should be presented with an error and a suggestion of the available options (e.g. "rock", "paper", "scissors" for RPS and "rock", "paper", "scissors", "lizard", "spock" for RPSLS).
-// Each command should echo its own help text with usage examples when invoked with -h or --help (see below).
-// Each command should echo rules when invoked with -r --rules (see below).
-// If an out-of-range argument is supplied to your functions, the function should return an error on console.error() indicating that [ARGUMENT] is out of range.
-
-
 // Process args and put them into 'args'
 let args = minimist(process.argv.slice(2));
 
