@@ -15,7 +15,7 @@ Examples:
   node-rpsls rock   Return JSON with results for RPSLS played against a simulated opponent.
                     e.g {"player":"rock","opponent":"Spock","result":"lose"}`;
 
-let rules = `Rules for the Lizard-Spock Espansion of Rock Paper Scissors:
+let rules = `Rules for the Lizard-Spock Expansion of Rock Paper Scissors:
 
 - Scissors CUTS Paper
 - Paper COVERS Rock
@@ -48,7 +48,7 @@ if (args.r || args.rules) {
 let shot = args._[0];
 
 try {
-	console.log(JSON.stringify(rpsls(shot)));
+	  console.log(JSON.stringify(rpsls(shot)));
 } catch (e) {
     // If error happened in rpsls, log rules
     console.log(rules);
