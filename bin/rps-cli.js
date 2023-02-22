@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import { rps } from "../lib/rpsls.js"
+import minimist from "minimist";
 
 
 // Process args and put them into 'args'

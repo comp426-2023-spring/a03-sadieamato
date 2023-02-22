@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import { rpsls } from "../lib/rpsls.js"
+import minimist from "minimist";
 
 
 let help = `Usage: node-rpsls [SHOT]
@@ -12,7 +13,7 @@ Examples:
   node-rpsls        Return JSON with single player RPSLS result.
                     e.g. {"player":"rock"}
   node-rpsls rock   Return JSON with results for RPSLS played against a simulated opponent.
-                    e.g {"player":"rock","opponent":"Spock","result":"lose"}`
+                    e.g {"player":"rock","opponent":"Spock","result":"lose"}`;
 
 let rules = `Rules for the Lizard-Spock Espansion of Rock Paper Scissors:
 
@@ -25,7 +26,7 @@ let rules = `Rules for the Lizard-Spock Espansion of Rock Paper Scissors:
 - Lizard EATS Paper
 - Paper DISPROVES Spock
 - Spock VAPORIZES Rock
-- Rock CRUSHES Scissors`
+- Rock CRUSHES Scissors`;
 
 
 // Process args and put them into 'args'
@@ -44,7 +45,7 @@ if (args.r || args.rules) {
 }
 
 // Set shot equal to unlabeled argument
-let shot = args._[0]
+let shot = args._[0];
 
 try {
 	console.log(JSON.stringify(rpsls(shot)));
