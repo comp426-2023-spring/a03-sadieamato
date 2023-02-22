@@ -50,8 +50,7 @@ let shot = args._[0];
 try {
 	console.log(JSON.stringify(rpsls(shot)));
 } catch (e) {
-    // If error happened in rpsls, log rules and help messages
-    console.log(help);
+    // If error happened in rpsls, log rules
     console.log(rules);
 }
 
